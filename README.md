@@ -5,6 +5,15 @@ Um slider interativo e moderno apresentando os maiores jogadores de futebol de t
 ![alt text](<Screenshot 2025-12-03 164001.png>)
 
 
+---
+
+##  Demonstração Ao Vivo
+
+Você pode visualizar o projeto em funcionamento no link abaixo:
+
+ **[GitHub Pages](--)**
+
+---
 ##  Sobre o Projeto
 
 **The Goats** é uma landing page interativa que celebra lendas do futebol através de um carrossel elegante com transições suaves, backgrounds personalizados por jogador e uma interface futurista com efeitos visuais em neon.
