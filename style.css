@@ -7,8 +7,6 @@
 }
 
 body {
-  background-image: url(img/campoBG.jpg);
-  background-repeat: no-repeat;
   color: white;
   font-size: 1rem;
   overflow: hidden;
@@ -62,8 +60,38 @@ header nav ul li:hover::after {
 .container {
   height: 100vh;
   position: relative;
-  background: linear-gradient(135deg, #0f0f1e 0%, #1f1f3a 100%);
   overflow: hidden;
+  /* Dynamic background image set via JS */
+  background-position: center;
+  background-size: cover;
+}
+
+/* Arrival effect layer for background */
+.container::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  /* Dark overlay to highlight the player */
+  background: rgba(0, 0, 0, 0.45);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Hidden staging layer to cross-fade backgrounds */
+.bg-staging {
+  position: absolute;
+  inset: 0;
+  background-position: center;
+  background-size: cover;
+  opacity: 0;
+  transform: scale(1.05);
+  transition: opacity 700ms ease, transform 700ms ease;
+  z-index: 0;
+}
+
+.bg-staging.active {
+  opacity: 1;
+  transform: scale(1);
 }
 
 .container::before {
