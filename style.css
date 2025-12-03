@@ -110,10 +110,14 @@ header nav ul li:hover::after {
   justify-content: center;
   align-items: center;
   opacity: 0;
+
+  transform: translateX(100vw);
+  transition: transform 1s ease-in-out, opacity 1s ease-in-out;
 }
 
 .active {
   opacity: 1;
+  transform: translateX(0);
 }
 
 .player-img {
@@ -130,6 +134,16 @@ header nav ul li:hover::after {
   max-width: 80%;
   max-height: 60%;
   filter: drop-shadow(0 0 30px rgba(0, 247, 255, 0.3));
+
+  transform: translateX(200px);
+  opacity: 0;
+  transition: transform 0.6s ease, opacity 0.6s ease;
+  transition-delay: 0.8s;
+}
+
+.active .player-img img {
+  transform: translateX(0);
+  opacity: 1;
 }
 
 .content {
@@ -149,6 +163,16 @@ header nav ul li:hover::after {
   font-weight: 600;
   letter-spacing: 2px;
   margin-bottom: 0.625rem;
+
+  transform: translateX(200px);
+  opacity: 0;
+  transition: transform 0.6s ease, opacity 0.6s ease;
+  transition-delay: 0.8s;
+}
+
+.active .player-tag {
+  transform: translateX(0);
+  opacity: 1;
 }
 
 .player-name {
@@ -156,6 +180,15 @@ header nav ul li:hover::after {
   font-family: "Orbitron", sans-serif;
   line-height: 1.1;
   margin-bottom: 1.2rem;
+  transform: translateX(200px);
+  opacity: 0;
+  transition: transform 0.6s ease, opacity 0.6s ease;
+  transition-delay: 0.8s;
+}
+
+.active .player-name{
+  transform: translateX(0);
+  opacity: 1;
 }
 
 .player-description {
@@ -164,6 +197,16 @@ header nav ul li:hover::after {
   line-height: 1.6;
   margin-bottom: 30px;
   max-width: 600px;
+
+  transform: translateX(200px);
+  opacity: 0;
+  transition: transform 0.6s ease, opacity 0.6s ease;
+  transition-delay: 0.8s;
+}
+
+.active .player-description{
+  transform: translateX(0);
+  opacity: 1;
 }
 
 .btn {
@@ -175,6 +218,16 @@ header nav ul li:hover::after {
   font-weight: 600;
   cursor: pointer;
   border: none;
+
+  transform: translateX(200px);
+  opacity: 0;
+  transition: transform 0.6s ease, opacity 0.6s ease;
+  transition-delay: 0.8s;
+}
+
+.active .btn{
+  transform: translateX(0);
+  opacity: 1;
 }
 
 .btn:hover {
