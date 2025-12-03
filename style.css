@@ -61,23 +61,19 @@ header nav ul li:hover::after {
   height: 100vh;
   position: relative;
   overflow: hidden;
-  /* Dynamic background image set via JS */
   background-position: center;
   background-size: cover;
 }
 
-/* Arrival effect layer for background */
 .container::after {
   content: "";
   position: absolute;
   inset: 0;
-  /* Dark overlay to highlight the player */
   background: rgba(0, 0, 0, 0.45);
   pointer-events: none;
   z-index: 1;
 }
 
-/* Hidden staging layer to cross-fade backgrounds */
 .bg-staging {
   position: absolute;
   inset: 0;
@@ -141,6 +137,7 @@ header nav ul li:hover::after {
 
   transform: translateX(100vw);
   transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+  z-index: 2;
 }
 
 .active {
@@ -182,6 +179,7 @@ header nav ul li:hover::after {
   justify-content: center;
   z-index: 2;
   flex-direction: column;
+  position: relative;
 }
 
 .player-tag {
