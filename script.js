@@ -5,6 +5,9 @@ const dots = document.querySelectorAll(".dot");
 const numberIndicator = document.querySelector(".numbers");
 const list = document.querySelector(".list");
 const container = document.querySelector(".container");
+const navHome = document.getElementById("nav-home");
+const navPlayers = document.getElementById("nav-players");
+const navContact = document.getElementById("nav-contact");
 
 // Create a staging layer for background cross-fade if not present
 let bgStaging = document.querySelector(".bg-staging");
@@ -79,3 +82,27 @@ nextButton.addEventListener("click", () => {
 
 // Initial background setup
 setBackgroundForActive();
+
+// Nav: Home -> first image
+navHome?.addEventListener("click", () => {
+  // Remove current active states
+  document.querySelector(".item.active")?.classList.remove("active");
+  document.querySelector(".dot.active")?.classList.remove("active");
+
+  // Set to first slide
+  active = 0;
+  items[active].classList.add("active");
+  dots[active].classList.add("active");
+  numberIndicator.textContent = String(active + 1).padStart(2, "0");
+  setBackgroundForActive();
+});
+
+// Nav: Players -> do nothing
+navPlayers?.addEventListener("click", () => {
+  // No-op intentionally as requested
+});
+
+// Nav: Contact -> open GitHub in a new tab
+navContact?.addEventListener("click", () => {
+  window.open("https://github.com/TheRazorbill", "_blank");
+});
