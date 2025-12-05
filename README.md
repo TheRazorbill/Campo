@@ -120,10 +120,6 @@ Para adicionar um novo jogador ao slider:
 
 ##  Responsividade
 
-O projeto está otimizado para desktops. Para suporte mobile, considere ajustar:
-- Tamanhos de fonte (rem/em)
-- Layout flex para mobile (stack vertical)
-- Tamanho das imagens
 
 ##  Autor
 
