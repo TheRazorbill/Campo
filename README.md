@@ -118,9 +118,6 @@ Para adicionar um novo jogador ao slider:
 - **Header > Contact**: acessa o GitHub do desenvolvedor
 - **Auto-play**: transição automática a cada 20s
 
-##  Responsividade
-
-
 ##  Autor
 
 **TheRazorbill**
